@@ -1,0 +1,1 @@
+web: gunicorn madlibsgen.wsgi --log-file -

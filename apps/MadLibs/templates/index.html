@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fun eCards</title>
+
+    <link rel="stylesheet" href="../static/css/fun.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="/">
+                <img class="logo" src="../static/images/funecardslogo.png"></a>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="content">
+            <h5>Birthday? Anniversary? Accomplishment?
+            </h5>
+            <h6>Show your friends and family you care by sending them a hilarious greeting to celebrate. Fill out the
+                form below and we'll do the rest!</h6>
+            <table class="table table-hover bg-clear">
+                <div class="user-form">
+                    <tr>
+                        <form action="/create" method="post">
+                            {% csrf_token %}
+                            <td class="showbig">
+                                <label>Sender: </label>
+                            </td>
+                            <td>
+                                <label class="showsmall">Sender:</label>
+                                <input type="text" class="form-control" name="sender" value="" placeholder="my name"
+                                    required>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Recipient:</label>
+                        </td>
+                        <td>
+                            <label class="showsmall">Recipient:</label>
+                            <input type="text" class="form-control" name="recipient" value="" placeholder="their name"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Occasion:</label>
+                        </td>
+                        <td>
+                            <label class="showsmall">Occasion:</label>
+                            <input type="text" class="form-control" name="event" value="" placeholder="bat mitzvah, promotion, engagement..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Body part or organ: </label>
+                        </td>
+                        <td>
+                            <label class="showsmall">Body part or organ:</label>
+                            <input type="text" class="form-control" name="noun1" value="" placeholder="nose, kidney, toenail..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Number: </label>
+                        </td>
+                        <td>
+                            <label class="showsmall">Number:</label>
+                            <input type="text" class="form-control" name="noun2" value="" placeholder=".37, 25, 743..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Countable noun, singular: </label>
+                            <br>
+                            <p class="helptxt">(Thing you can count: pencil, man; *not* music, New York)</p>
+                        </td>
+                        <td>
+                            <label class="showsmall">Countable noun, singular:</label>
+                            <span class="helptxt showsmall">(Thing you can count: pencil, man; *not* music, New York)</span>
+                            <input type="text" class="form-control" name="noun3" value="" placeholder="pencil, shoe, frying pan..."
+                                required></td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Two emotions: </label>
+                            <br>
+                            <p class="helptxt">(Noun; completes the sentence "I'm filled with...")</p>
+                        </td>
+                        <td>
+                            <label class="showsmall">Two emotions:</label>
+                            <span class="helptxt showsmall">(Noun; completes the sentence "I'm filled with ___")</span>
+                            <input type="text" class="form-control" name="noun4" value="" placeholder="1: love, rage, confusion..."
+                                required>
+                            <input type="text" class="form-control" name="noun7" value="" placeholder="2: joy, disgust, fear..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Date, timeframe, or event: </label>
+                            <br>
+                            <p class="helptxt">(Noun; completes the sentence "it happened on ___")</p>
+                        </td>
+                        <td>
+                            <label class="showsmall">Date, timeframe, or event:</label>
+                            <span class="helptxt showsmall">(Noun; completes the sentence "it happened on ___")</span>
+                            <input type="text" class="form-control" name="noun5" value="" placeholder="Tuesday, March, spring break..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Food, plural: </label>
+                        </td>
+                        <td>
+                            <label class="showsmall">Food, plural:</label>
+                            <input type="text" class="form-control" name="noun6" value="" placeholder="chips, sardines, beets..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Animals, plural: </label>
+                        </td>
+                        <td>
+                            <label class="showsmall">Animals, plural:</label>
+                            <input type="text" class="form-control" name="noun8" value="" placeholder="hedgehogs, parrots, squirrels..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Job, role, or title:</label>
+                            <br>
+                            <p class="helptxt">(Noun; completes the sentence "she is a great ___")</p>
+                        </td>
+                        <td>
+                            <label class="showsmall">Job, role, or title:</label>
+                            <span class="helptxt showsmall">(Noun; completes the sentence "she is a great ___")</span>
+                            <input type="text" class="form-control" name="noun9" value="" placeholder="captain, grandma, accountant..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Four descriptive adjectives: </label>
+                            <br>
+                            <p class="helptxt">(Characteristics of a thing: color, size, texture; words ending in -y)</p>
+                        </td>
+                        <td>
+                            <label class="showsmall">Four descriptive adjectives:</label>
+                            <span class="helptxt showsmall">(Characteristics of a thing: color, size, texture; words
+                                ending in -y)</span>
+                            <input type="text" class="form-control" name="adj1" value="" placeholder="1: groovy, stinky, fluffy..."
+                                required>
+                            <input type="text" class="form-control" name="adj2" value="" placeholder="2: empty, warm, ugly..."
+                                required>
+                            <input type="text" class="form-control" name="adj4" value="" placeholder="3: blue, hairy, silly..."
+                                required>
+                            <input type="text" class="form-control" name="adj5" value="" placeholder="4: sharp, funky, round..."
+                                required></td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Two feelings: </label>
+                            <br>
+                            <p class="helptxt">(Adjective; completes the sentence "I feel ___")</p>
+                        </td>
+                        <td>
+                            <label class="showsmall">Two feelings:</label>
+                            <span class="helptxt showsmall">(Adjective; completes the sentence "I feel ___")</span>
+                            <input type="text" class="form-control" name="adj3" value="" placeholder="1: happy, upset, confused..."
+                                required>
+                            <input type="text" class="form-control" name="adj7" value="" placeholder="2: angry, excited, ashamed..."
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="showbig">
+                            <label>Superlative adjective:</label>
+                            <br>
+                            <p class="helptxt">(Word ending in "-est")</p>
+                        </td>
+                        <td>
+                            <label class="showsmall">Superlative adjective:</label>
+                            <span class="helptxt showsmall">(Word ending in "-est")</span>
+                            <input type="text" class="form-control" name="adj6" value="" placeholder="fizziest, purplest, driest..."
+                                required>
+                        </td>
+                    </tr>
+            </table>
+
+            <a class='btn' style="background-color: navy; color: white; margin-right: 10px;" href="/clear" role="button">
+                Cancel</a>
+            <input class="btn" style="background-color: lightseagreen; color: white;" type='submit' value='Submit'>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+</head>
+
+<body>
+
+</body>
+
+</html>
