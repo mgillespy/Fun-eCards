@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6zlmnmt0)4)$nwi(hwi^y!n=_+aylk^z^a3iwv_mapz515j^kt'
+SECRET_KEY = 'secretcats'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -119,7 +119,7 @@ USE_TZ = True
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Static files (CSS, JavaScript, Images)
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.

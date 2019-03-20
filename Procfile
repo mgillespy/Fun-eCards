@@ -1,1 +1,1 @@
-web: gunicorn madlibsgen.wsgi --log-file -
+web: gunicorn MadLibs.wsgi --log-file -
