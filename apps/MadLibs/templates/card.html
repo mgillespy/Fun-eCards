@@ -18,7 +18,8 @@
             <nav class="navbar navbar-expand-md fixed-top">
                 <div class="container">
                     <a href="/">
-                        <img class="logo" src="../static/images/funecardslogo.png"></a>
+                        {% load static %}
+                        <img class="logo" src="{% static 'images/funecardslogo.png' %}" alt="Fun eCards logo"></a>
                 </div>
 
             </nav>
@@ -38,16 +39,17 @@
 
             <div class="noscreen">
                 <h5 class="return">Created with</h5>
-                <img class="cardlogo" src="../static/images/funecardslogo.png"></a>
+                    {% load static %}
+                    <img class="logo" src="{% static 'images/funecardslogo.png' %}" alt="Fun eCards logo">
             </div>
             <div class="noprint">
                 <div id="shake">
                     <a href="/">
                         <h5 class="return">Make more</h5>
-                        <img class="cardlogo" src="../static/images/funecardslogo.png">
-                    </a></div>
+                            {% load static %}
+                            <img class="logo" src="{% static 'images/funecardslogo.png' %}" alt="Fun eCards logo">            </a></div>
             </div>
-            </a>
+
         </div>
         <div class="noprint">
             <p class="footer">Printing? From the print options page, uncheck "headers and footers" and check "background

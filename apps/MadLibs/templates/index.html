@@ -16,7 +16,8 @@
     <nav class="navbar navbar-expand-md fixed-top">
         <div class="container">
             <a href="/">
-                <img class="logo" src="../static/images/funecardslogo.png"></a>
+                {% load static %}
+                <img class="logo" src="{% static 'images/funecardslogo.png' %}" alt="Fun eCards logo"></a>
         </div>
     </nav>
     <div class="wrapper">
