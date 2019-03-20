@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fun eCards</title>
+    <link rel="stylesheet" href="../static/css/fun.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="noprint">
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container">
+                    <a href="/">
+                        <img class="logo" src="../static/images/funecardslogo.png"></a>
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <div id="card">
+
+            <p>Dear {{ card.adj1 }} {{ card.recipient }}, </p>
+            <p>It is with a very {{ card.adj2 }} {{ card.noun1 }} that I wish you {{ card.adj3 }} {{ card.event }}!</p>
+            <p>It took you {{ card.noun2 }} {{ card.adj4 }} years to reach this day. You have always been a very {{ card.adj5 }}
+                {{ card.noun3 }} and you deserve the {{ card.adj6 }} {{ card.event }} celebration.</p>
+            <p>I hope your {{ card.noun5 }} is filled with {{ card.noun6 }}, {{ card.noun7 }}, and {{ card.noun8 }}.</p>
+            <p>Sending {{ card.adj7 }} regards from your {{ card.noun9 }},</p>
+            <p> {{ card.sender }}</p>
+
+            <div class="noscreen">
+                <h5 class="return">Created with</h5>
+                <img class="cardlogo" src="../static/images/funecardslogo.png"></a>
+            </div>
+            <div class="noprint">
+                <div id="shake">
+                    <a href="/">
+                        <h5 class="return">Make more</h5>
+                        <img class="cardlogo" src="../static/images/funecardslogo.png">
+                    </a></div>
+            </div>
+            </a>
+        </div>
+        <div class="noprint">
+            <p class="footer">Printing? From the print options page, uncheck "headers and footers" and check "background
+                graphics."</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
