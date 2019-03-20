@@ -121,6 +121,7 @@ p {
 
 .return {
   margin: 0 !important;
+
 }
 
 .btn:hover {
@@ -200,6 +201,14 @@ img:hover {
     background: url("../images/background.png");
     font-size: 1.5em;
   }
+
+  .noprint {
+    display: none;
+  }
+
+  .noscreen {
+    text-align: center;
+  }
 }
 
 @media screen {
@@ -224,7 +233,7 @@ img:hover {
     display: none;
   }
 
-  #shake {
+  .noprint {
     text-align: center;
   }
 }
